@@ -1,2 +1,3 @@
 # Landing-Page
-this is an odin project exercis, practicing the skills leant sofar
+This is an odin project exercis, practicing the skills leant sofar
+
