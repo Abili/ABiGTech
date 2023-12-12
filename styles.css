@@ -88,7 +88,7 @@ button {
     font-weight: bold;
     color: #1F2937;
     margin-top: 0px; /* Adjust the top margin as needed */
-    margin-bottom: 0px; /* Adjust the bottom margin as needed */
+    margin-bottom:0px; /* Adjust the bottom margin as needed */
 }
 
 #heading-content {
@@ -183,3 +183,36 @@ li {
     align-items: center;
     padding: 18px;
 }
+
+.content-3 {
+
+    background-color: gainsboro;
+    max-width: 100%;
+    font-size: 24px;
+    margin-top: 400px;
+    padding: 20px;
+    display: flex; /* Set the display to flex */
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row; /* Arrange items in a row (side by side) */
+}
+
+.card {
+    flex: 1; /* Make cards share the space equally */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-right: 20px; /* Add margin to separate the cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    margin-bottom: 10px;
+}
+
+.text-author {
+    font-style: italic;
+    color: #555;
+}
+
