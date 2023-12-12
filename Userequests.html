@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deletion Requests</title>
+</head>
+    <body>
+        <h1>User Deletion Requests</h1>
+        <ul id="deletionRequestsList"></ul>
+    
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    
+        <script>
+            // Initialize Firebase
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyAJBlxp2SUfwdh5GMfGP19Q_aetYtKybgs",
+                authDomain: "ngalo-2d916.firebaseapp.com",
+                databaseURL: "https://ngalo-2d916-default-rtdb.firebaseio.com",
+                projectId: "ngalo-2d916",
+                storageBucket: "ngalo-2d916.appspot.com",
+                messagingSenderId: "241682691747",
+                appId: "1:241682691747:web:b93817a29145b521f47116",
+                measurementId: "G-K2QD100G31"
+              };
+    
+
+
+            firebase.initializeApp(firebaseConfig);
+    
+            // Reference to the deletion requests node in the database
+            const deletionRequestsRef = firebase.database().ref('deletionrequests');
+    
+            // Listen for changes in the deletion requests
+            deletionRequestsRef.on('value', (snapshot) => {
+                const deletionRequestsList = document.getElementById('deletionRequestsList');
+                deletionRequestsList.innerHTML = ''; // Clear previous entries
+    
+                snapshot.forEach((childSnapshot) => {
+                    const requestData = childSnapshot.val();
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `User ID: ${requestData.userId} - Reason: ${requestData.reason}`;
+                    deletionRequestsList.appendChild(listItem);
+                });
+            });
+        </script>
+    </body>
+    </html>
+    
