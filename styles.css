@@ -36,6 +36,18 @@ a {
     color: white;
 }
 
+
+#deleteInstructions .instruction-list-container {
+    text-align: left;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+#deleteInstructions .instruction-list {
+    list-style-position: inside;
+}
+
+
 .categories {
     display: flex;
     font-size: 18px;
