@@ -183,6 +183,16 @@ li {
     align-items: center;
     padding: 18px;
 }
+.footer_accountmgt {
+    margin-top: 200px;
+    max-width: 100%;
+    background-color: white;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+}
 
 .content-3 {
 
